@@ -1,2 +1,2 @@
 # Alan-AI
-Testing out Alan-Ai fora e-commerce site 
+Testing out Alan-Ai for a e-commerce site 
