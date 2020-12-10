@@ -3,7 +3,8 @@ import alanBtn from '@alan-ai/alan-sdk-web';
 import { useCart } from '../context/CartContext';
 
 const COMMANDS = {
-	OPEN_CART: 'open-cart'
+	OPEN_CART: 'open-cart',
+	CLOSE_CART:'close-cart'
 };
 
 export default function useAlan() {
@@ -22,14 +23,30 @@ export default function useAlan() {
 		[ alanInstance,isCartEmpty, setShowCartItems]
 	);
 
+	const closeCart = useCallback(() => {
+		if(isCartEmpty){
+			alanInstance.playText('You have no items in your cart')
+		} else {
+			alanInstance.playText("Closing cart")
+			setShowCartItems(false)
+		}
+
+	},
+	[ alanInstance,isCartEmpty, setShowCartItems]
+);
+
 	useEffect(
 		() => {
 			window.addEventListener(COMMANDS.OPEN_CART, openCart);
+			window.addEventListener(COMMANDS.CLOSE_CART, closeCart);
+
 			return () => {
 				window.removeEventListener(COMMANDS.OPEN_CART, openCart);
+				window.removeEventListener(COMMANDS.CLOSE_CART, closeCart);
+
 			};
 		},
-		[ openCart ]
+		[ openCart, closeCart ]
 	);
 
 	useEffect(() => {
