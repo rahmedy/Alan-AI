@@ -8,13 +8,19 @@ const COMMANDS = {
 
 export default function useAlan() {
 	const [ alanInstance, setAlanInstance ] = useState();
-	const { setShowCartItems } = useCart();
+	const { setShowCartItems, isCartEmpty } = useCart();
 
-	const openCart = useCallback(
-		() => {
-			alanInstance.playText('Opening cart')
-			setShowCartItems(true)
-		},	[ alanInstance ]);
+	const openCart = useCallback(() => {
+			if(isCartEmpty){
+				alanInstance.playText('You have no items in your cart')
+			} else {
+				alanInstance.playText("Opening cart")
+				setShowCartItems(true)
+			}
+
+		},
+		[ alanInstance,isCartEmpty, setShowCartItems]
+	);
 
 	useEffect(
 		() => {
