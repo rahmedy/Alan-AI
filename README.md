@@ -13,6 +13,14 @@ Using a sample e-commerce site to integrate Alan-Ai to allow the user to do mult
 ## Installation
 To install run the following command:
 ``` npm i ``` 
+
+## Intstructions 
+The current comands that work are:
+(open|view) (the|) cart'
+'close (the|)cart'
+add the (itemName) to the cart
+remove the (itemName) from the cart
+
 ## License
 This project is licensed under none license.
 ## Contribution 
