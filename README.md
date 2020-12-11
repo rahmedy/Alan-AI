@@ -6,16 +6,13 @@
 Using a sample e-commerce site to integrate Alan-Ai to allow the user to do multiple functions such as adding an item to the cart or removing it. Used Alan Ai in a react project with reusable components and custom hooks. 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
 * [License](#license)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
 To install run the following command:
-``` npm i ```
-## Use
-for users with disabailtys 
+``` npm i ``` 
 ## License
 This project is licensed under none license.
 ## Contribution 
