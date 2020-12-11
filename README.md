@@ -3,7 +3,7 @@
     
 ![License](https://img.shields.io/badge/License-none-blue.svg)
 ## Description
-Using a sample ecommerce site to inegrate Alan-Ai to allow the user tto do multiple fucntions such as adding a item to teh cart or removing it. USed alan ai in a react proecjt with reusbale compoents and cusoten hooks.
+Using a sample e-commerce site to integrate Alan-Ai to allow the user to do multiple functions such as adding an item to the cart or removing it. Used Alan Ai in a react project with reusable components and custom hooks. 
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -12,7 +12,7 @@ Using a sample ecommerce site to inegrate Alan-Ai to allow the user tto do multi
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-To installrun the following command:
+To install run the following command:
 ``` npm i ```
 ## Use
 for users with disabailtys 
