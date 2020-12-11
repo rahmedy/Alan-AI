@@ -6,12 +6,13 @@ import storeItems from '../items.json'
 const COMMANDS = {
 	OPEN_CART: 'open-cart',
 	CLOSE_CART: 'close-cart',
-	ADD_ITEM: 'add-item'
+	ADD_ITEM: 'add-item',
+	REMOVE_ITEM: 'remove-item'
 };
 
 export default function useAlan() {
 	const [ alanInstance, setAlanInstance ] = useState();
-	const { setShowCartItems, isCartEmpty, addToCart } = useCart();
+	const { setShowCartItems, isCartEmpty, addToCart, removeFromCart, cart } = useCart();
 
 	const openCart = useCallback(
 		() => {
@@ -47,23 +48,39 @@ export default function useAlan() {
 		}
 
 
-	})
+	},[alanInstance,addToCart])
+
+	const removeItem = useCallback(({detail: {name}}) =>{
+		const entry = cart.find(e => e.item.name.toLowerCase() === name.toLowerCase())
+		if(entry == null) {
+			alanInstance.playText(`I cannot find the ${name} item in your cart`)
+		} else {
+			removeFromCart(entry.itemId)
+			alanInstance.playText(`I Removed the ${name} item from your cart`)
+		}
+
+
+	},[alanInstance,removeFromCart,cart])
 
 	useEffect(
 		() => {
 			window.addEventListener(COMMANDS.OPEN_CART, openCart);
 			window.addEventListener(COMMANDS.CLOSE_CART, closeCart);
 			window.addEventListener(COMMANDS.ADD_ITEM, addItem);
+			window.addEventListener(COMMANDS.REMOVE_ITEM, removeItem);
+
 
 
 			return () => {
 				window.removeEventListener(COMMANDS.OPEN_CART, openCart);
 				window.removeEventListener(COMMANDS.CLOSE_CART, closeCart);
 				window.removeEventListener(COMMANDS.ADD_ITEM, addItem);
+				window.removeEventListener(COMMANDS.REMOVE_ITEM, removeItem);
+
 
 			};
 		},
-		[ openCart, closeCart ]
+		[ openCart, closeCart, addItem, removeItem ]
 	);
 
 	useEffect(() => {
