@@ -16,10 +16,10 @@ To install run the following command:
 
 ## Intstructions 
 The current comands that work are:
-(open|view) (the|) cart'
-'close (the|)cart'
-add the (itemName) to the cart
-remove the (itemName) from the cart
+(open|view) (the|) cart' - 
+'close (the|)cart'-
+add the (itemName) to the cart-
+remove the (itemName) from the cart-
 
 ## License
 This project is licensed under none license.
