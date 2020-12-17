@@ -2,6 +2,9 @@
       
     
 ![License](https://img.shields.io/badge/License-none-blue.svg)
+## Live Site: 
+https://rahmedy.github.io/Alan-AI/
+
 ## Description
 Using a sample e-commerce site to integrate Alan-Ai to allow the user to do multiple functions such as adding an item to the cart or removing it. Used Alan Ai in a react project with reusable components and custom hooks. 
 ## Table of Contents
