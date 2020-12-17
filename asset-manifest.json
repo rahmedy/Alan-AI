@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/rahmedy/Alan-AI/static/js/main.d5c2c47c.chunk.js",
+    "main.js.map": "/rahmedy/Alan-AI/static/js/main.d5c2c47c.chunk.js.map",
+    "runtime-main.js": "/rahmedy/Alan-AI/static/js/runtime-main.010766ba.js",
+    "runtime-main.js.map": "/rahmedy/Alan-AI/static/js/runtime-main.010766ba.js.map",
+    "static/css/2.637f5471.chunk.css": "/rahmedy/Alan-AI/static/css/2.637f5471.chunk.css",
+    "static/js/2.009f3e0d.chunk.js": "/rahmedy/Alan-AI/static/js/2.009f3e0d.chunk.js",
+    "static/js/2.009f3e0d.chunk.js.map": "/rahmedy/Alan-AI/static/js/2.009f3e0d.chunk.js.map",
+    "index.html": "/rahmedy/Alan-AI/index.html",
+    "static/css/2.637f5471.chunk.css.map": "/rahmedy/Alan-AI/static/css/2.637f5471.chunk.css.map",
+    "static/js/2.009f3e0d.chunk.js.LICENSE.txt": "/rahmedy/Alan-AI/static/js/2.009f3e0d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.010766ba.js",
+    "static/css/2.637f5471.chunk.css",
+    "static/js/2.009f3e0d.chunk.js",
+    "static/js/main.d5c2c47c.chunk.js"
+  ]
+}
